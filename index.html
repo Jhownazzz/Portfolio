@@ -6,17 +6,12 @@
   <title>Jhonas Angelo Cañotal | Developer Portfolio</title>
 
   <link rel="icon" href="jhonas.ico" type="image/x-icon" />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Styles remain unchanged */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0f172a;
@@ -26,25 +21,21 @@
       display: flex;
       flex-direction: column;
     }
-
     header {
       background: linear-gradient(to right, #1e3a8a, #2563eb);
       padding: 2.5rem 1rem;
       border-radius: 0 0 20px 20px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-
-   .header-container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-
+    .header-container {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
     header img {
       width: 160px;
       height: 160px;
@@ -52,15 +43,8 @@
       object-fit: cover;
       border: 4px solid #3b82f6;
       box-shadow: 0 0 15px #3b82f6;
-      flex-shrink: 0;
     }
-
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
+    .header-text { display: flex; flex-direction: column; justify-content: center; }
     header h1 {
       font-size: 2.8rem;
       font-weight: 800;
@@ -68,21 +52,11 @@
       color: #e0e7ff;
       word-break: break-word;
     }
-
     header p.subtitle {
       font-size: 1.3rem;
       color: #dbeafe;
       font-weight: 600;
     }
-
-    header p.role {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-top: 0.25rem;
-      color: #93c5fd;
-      font-style: italic;
-    }
-
     main {
       max-width: 960px;
       margin: 0 auto 4rem auto;
@@ -91,58 +65,39 @@
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
+    section { margin-bottom: 3rem; }
     h2 {
       border-left: 5px solid #3b82f6;
       padding-left: 1rem;
       font-size: 1.75rem;
       margin-bottom: 1rem;
       color: #93c5fd;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
       font-weight: 700;
     }
-
     ul {
       list-style-type: disc;
       padding-left: 2rem;
       font-size: 1.1rem;
     }
-
     a {
       color: #60a5fa;
       text-decoration: none;
       transition: color 0.3s ease;
       word-break: break-word;
     }
-
     a:hover {
       color: #93c5fd;
       text-decoration: underline;
     }
-
-    .contact p,
-    .contact a {
+    .contact p, .contact a {
       margin-bottom: 0.5rem;
       font-size: 1.15rem;
-      word-break: break-word;
     }
-
-    .contact i,
-    .skills i,
-    .experience i,
-    .education i {
+    .contact i, .skills i, .experience i, .education i {
       margin-right: 0.8rem;
       color: #3b82f6;
       min-width: 20px;
-      text-align: center;
     }
-
     footer {
       background-color: #0f172a;
       color: #94a3b8;
@@ -152,37 +107,24 @@
       font-size: 1rem;
       margin-top: auto;
     }
-
     footer .social-links {
       margin: 1rem 0;
       display: flex;
       justify-content: center;
       gap: 2rem;
     }
-
     footer .social-links a {
       color: #94a3b8;
       font-size: 1.6rem;
       transition: color 0.3s ease;
     }
-
     footer .social-links a:hover {
       color: #3b82f6;
     }
-
     @media (max-width: 640px) {
-      .header-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      header img {
-        margin-bottom: 1rem;
-      }
-
-      .header-text {
-        align-items: center;
-      }
+      .header-container { flex-direction: column; text-align: center; }
+      header img { margin-bottom: 1rem; }
+      .header-text { align-items: center; }
     }
   </style>
 </head>
@@ -192,7 +134,7 @@
       <img src="./jhonas.ico" alt="Profile Picture of Jhonas Angelo" />
       <div class="header-text">
         <h1>Jhonas Angelo A. Cañotal</h1>
-        <p class="subtitle">BSCS Student | Full-Stack Developer | UI/UX Intermediate</p>
+        <p class="subtitle">BSCS Student | UI/UX Designer | Graphic Design Manager</p>
       </div>
     </div>
   </header>
@@ -202,30 +144,27 @@
       <h2><i class="fas fa-address-card"></i> Contact</h2>
       <p><i class="fas fa-phone"></i> 0964 944 7255</p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:canotaljhonasangelo@gmail.com">canotaljhonasangelo@gmail.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> Bagong Silang, Caloocan City</p>
-      <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank" rel="noopener noreferrer">Facebook Profile</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/Jhownazzz" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Phase 7B Package 10 Block 30 Lot 8, Bagong Silang, Caloocan City</p>
+      <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank">Facebook Profile</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/Jhownazzz" target="_blank">GitHub Profile</a></p>
     </section>
 
     <section class="about">
       <h2><i class="fas fa-user"></i> About Me</h2>
       <p>
-        I am a passionate and detail-oriented Computer Science student with specialization in full-stack web development and UI/UX design.
-        I aim to build seamless and scalable solutions that deliver optimal user experiences. I thrive in team environments,
-        continuously enhancing my skills and adapting to new technologies.
+        Graphic Design Manager at St. Clare College with expertise in visual communication and digital branding. I lead the Computer Science website project and produce impactful designs for both print and digital media. I specialize in UI/UX design, responsive development, and cohesive branding experiences.
       </p>
     </section>
 
     <section class="skills">
       <h2><i class="fas fa-tools"></i> Technical Skills</h2>
       <ul>
-        <li><i class="fab fa-html5"></i> HTML, CSS, JavaScript</li>
-        <li><i class="fab fa-java"></i> Java & Spring Boot</li>
-        <li><i class="fas fa-cubes"></i> Microservices & RESTful APIs</li>
-        <li><i class="fas fa-palette"></i> UI/UX Design (Figma, Canva, Adobe Photoshop)</li>
+        <li><i class="fas fa-palette"></i> UI/UX Design (Figma, Photoshop, Illustrator, Canva, Desygner)</li>
+        <li><i class="fas fa-globe"></i> Responsive Web Design</li>
+        <li><i class="fas fa-laptop-code"></i> Front-End Development</li>
+        <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
         <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-        <li><i class="fas fa-brain"></i> Basic Machine Learning with Python</li>
-        <li><i class="fas fa-laptop-code"></i> Responsive Web Design</li>
+        <li><i class="fas fa-puzzle-piece"></i> Branding and Visual Communication</li>
       </ul>
     </section>
 
@@ -233,9 +172,9 @@
       <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <ul>
         <li><strong>St. Clare College of Caloocan</strong> – BS Computer Science (2023 - Present)</li>
-        <li><strong>Paulba National High School - SHS</strong> – STEM Track, High Honors (2021 - 2023)</li>
-        <li><strong>Paulba NHS - JHS</strong> – Special Science Class, With Honors (2017 - 2021)</li>
-        <li><strong>H.J. Atienza Elementary School</strong> – With Honors (2011 - 2017)</li>
+        <li><strong>Paulba NHS - SHS</strong> – STEM Track, High Honors, Best in Work Immersion, Research, and Calculus (2021 - 2023)</li>
+        <li><strong>Paulba NHS - JHS</strong> – Special Science Class, With Honors, Best in Math (2017 - 2021)</li>
+        <li><strong>H.J. Atienza Elementary School</strong> – With Honors, Best in Math (2011 - 2017)</li>
       </ul>
     </section>
 
@@ -254,26 +193,20 @@
     <section class="projects">
       <h2><i class="fas fa-laptop-code"></i> Sample Projects</h2>
       <ul>
-        <li><strong>Portfolio Website</strong> – A personal website to showcase my skills and certifications using HTML, CSS, and JavaScript.</li>
-        <li><strong>Todo App</strong> – A full-stack CRUD application with Spring Boot backend and React frontend.</li>
-        <li><strong>UI Prototype</strong> – Created a mobile-first UI for a productivity app using Figma and Adobe Photoshop.</li>
+        <li><strong>St. Clare CS Department Website</strong> – Led the development and UI/UX design of the department's official website.</li>
+        <li><strong>Portfolio Site</strong> – Designed and built a personal website to showcase my skills and visual design portfolio.</li>
+        <li><strong>UI Prototypes</strong> – Created mobile and desktop interface mockups using Figma for various internal projects.</li>
       </ul>
     </section>
   </main>
 
   <footer>
-  <div class="social-links">
-    <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://github.com/Jhownazzz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="mailto:canotaljhonasangelo@gmail.com" aria-label="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
-  &copy; 2025 Jhonas Angelo A. Cañotal. All rights reserved.
-</footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://github.com/Jhownazzz" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:canotaljhonasangelo@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    &copy; 2025 Jhonas Angelo A. Cañotal. All rights reserved.
+  </footer>
 </body>
 </html>

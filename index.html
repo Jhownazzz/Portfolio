@@ -6,197 +6,249 @@
   <title>Jhonas Angelo Cañotal | Developer Portfolio</title>
 
   <link rel="icon" href="jhonas.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    /* Styles remain unchanged */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #0f111a; color: #f0f0f0; line-height:1.6; }
+    a { text-decoration:none; color:#06b6d4; transition:0.3s; }
+    a:hover { color:#22d3ee; }
+
     header {
-      background: linear-gradient(to right, #1e3a8a, #2563eb);
-      padding: 2.5rem 1rem;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-    .header-container {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1.5rem;
+      background: linear-gradient(135deg,#1e293b,#0f172a);
+      padding:3rem 1rem;
+      text-align:center;
+      border-bottom:2px solid #3b82f6;
     }
     header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #3b82f6;
-      box-shadow: 0 0 15px #3b82f6;
+      width:160px; height:160px;
+      border-radius:50%;
+      border:4px solid #3b82f6;
+      object-fit:cover;
+      margin-bottom:1rem;
     }
-    .header-text { display: flex; flex-direction: column; justify-content: center; }
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 0.25rem;
-      color: #e0e7ff;
-      word-break: break-word;
-    }
-    header p.subtitle {
-      font-size: 1.3rem;
-      color: #dbeafe;
-      font-weight: 600;
-    }
-    main {
-      max-width: 960px;
-      margin: 0 auto 4rem auto;
-      padding: 2rem;
-      background-color: #1e293b;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    }
-    section { margin-bottom: 3rem; }
+    header h1 { font-size:2.8rem; color:#e0e7ff; margin-bottom:0.25rem; }
+    header p.subtitle { font-size:1.25rem; color:#a5b4fc; }
+
+    main { max-width:1000px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:3rem; }
     h2 {
-      border-left: 5px solid #3b82f6;
-      padding-left: 1rem;
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      color: #93c5fd;
-      font-weight: 700;
+      font-size:1.8rem;
+      margin-bottom:1rem;
+      color:#06b6d4;
+      border-bottom:2px solid #06b6d4;
+      padding-bottom:0.5rem;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 2rem;
-      font-size: 1.1rem;
+
+    /* CONTACT */
+    .contact p { margin-bottom:0.5rem; display:flex; align-items:center; gap:10px; }
+    .social-links { display:flex; gap:15px; margin-top:10px; flex-wrap:wrap; }
+    .social-links a { display:flex; align-items:center; gap:5px; font-weight:500; }
+
+    /* SKILLS */
+    .skills-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:15px; }
+    .skill-card {
+      background:#1e293b; padding:15px 20px; border-radius:10px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.25); transition:transform 0.3s ease;
     }
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      word-break: break-word;
+    .skill-card:hover { transform:translateY(-5px); }
+    .skill-card h3 { color:#06b6d4; margin-bottom:5px; }
+    .skill-card p { font-weight:500; }
+
+    /* CERTIFICATIONS & PROJECTS */
+    .card-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:15px; }
+    .card {
+      background:#1e293b; padding:20px; border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.25); transition:transform 0.3s ease, box-shadow 0.3s ease;
     }
-    a:hover {
-      color: #93c5fd;
-      text-decoration: underline;
-    }
-    .contact p, .contact a {
-      margin-bottom: 0.5rem;
-      font-size: 1.15rem;
-    }
-    .contact i, .skills i, .experience i, .education i {
-      margin-right: 0.8rem;
-      color: #3b82f6;
-      min-width: 20px;
-    }
+    .card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.35); }
+    .card h3 { color:#06b6d4; margin-bottom:10px; font-size:1.25rem; }
+    .card p { margin-bottom:5px; font-size:0.95rem; }
+    .card a { margin-top:10px; display:inline-block; font-weight:500; }
+
     footer {
-      background-color: #0f172a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      border-top: 1px solid #334155;
-      font-size: 1rem;
-      margin-top: auto;
+      background-color:#0f111a;
+      text-align:center;
+      padding:1.5rem 1rem;
+      border-top:2px solid #3b82f6;
+      color:#94a3b8; font-size:1rem;
     }
-    footer .social-links {
-      margin: 1rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    footer .social-links a {
-      color: #94a3b8;
-      font-size: 1.6rem;
-      transition: color 0.3s ease;
-    }
-    footer .social-links a:hover {
-      color: #3b82f6;
-    }
-    @media (max-width: 640px) {
-      .header-container { flex-direction: column; text-align: center; }
-      header img { margin-bottom: 1rem; }
-      .header-text { align-items: center; }
+    footer .social-links { justify-content:center; margin:0.5rem 0; }
+    footer .social-links a { font-size:1.4rem; }
+
+    @media(max-width:640px){
+      header h1 { font-size:2rem; }
+      header p.subtitle { font-size:1rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <img src="./jhonas.ico" alt="Profile Picture of Jhonas Angelo" />
-      <div class="header-text">
-        <h1>Jhonas Angelo A. Cañotal</h1>
-        <p class="subtitle">BSCS Student | UI/UX Designer | Graphic Design Manager</p>
-      </div>
-    </div>
+    <img src="./jhonas.ico" alt="Jhonas Angelo Cañotal" />
+    <h1>Jhonas Angelo A. Cañotal</h1>
+    <p class="subtitle">BSCS Student | UI/UX Designer | AI & Full-Stack Developer | Graphic Designer</p>
   </header>
 
   <main>
+    <!-- CONTACT -->
     <section class="contact">
-      <h2><i class="fas fa-address-card"></i> Contact</h2>
+      <h2>Contact & Connect</h2>
       <p><i class="fas fa-phone"></i> 0964 944 7255</p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:canotaljhonasangelo@gmail.com">canotaljhonasangelo@gmail.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> Phase 7B Package 10 Block 30 Lot 8, Bagong Silang, Caloocan City</p>
-      <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank">Facebook Profile</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/Jhownazzz" target="_blank">GitHub Profile</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Blk 9 Lot 28, Villa Amor Dos Subdivision, Barangay 172, Caloocan City, Philippines</p>
+      <div class="social-links">
+        <a href="https://github.com/Jhownazzz" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/jhonas-angelo-ca%C3%B1otal/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
     </section>
 
+    <!-- ABOUT ME -->
     <section class="about">
-      <h2><i class="fas fa-user"></i> About Me</h2>
+      <h2>About Me</h2>
       <p>
-        Graphic Design Manager at St. Clare College with expertise in visual communication and digital branding. I lead the Computer Science website project and produce impactful designs for both print and digital media. I specialize in UI/UX design, responsive development, and cohesive branding experiences.
+        BSCS Student at St. Clare College with expertise in AI, Full-Stack Development, UI/UX Design, Data Science, Cybersecurity, and Graphic Design.
+        I create scalable applications, intelligent systems, and visually impactful designs including posters, logos, and branding. Passionate about combining technology and creativity to deliver measurable impact.
       </p>
     </section>
 
+    <!-- TECHNICAL SKILLS -->
     <section class="skills">
-      <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-      <ul>
-        <li><i class="fas fa-palette"></i> UI/UX Design (Figma, Photoshop, Illustrator, Canva, Desygner)</li>
-        <li><i class="fas fa-globe"></i> Responsive Web Design</li>
-        <li><i class="fas fa-laptop-code"></i> Front-End Development</li>
-        <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
-        <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-        <li><i class="fas fa-puzzle-piece"></i> Branding and Visual Communication</li>
-      </ul>
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Programming Languages</h3>
+          <p>Python, JavaScript, C, Java</p>
+        </div>
+        <div class="skill-card">
+          <h3>Frameworks & Libraries</h3>
+          <p>Flask, React, Tailwind CSS</p>
+        </div>
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <p>MySQL, Firebase Firestore</p>
+        </div>
+        <div class="skill-card">
+          <h3>AI & Emerging Tech</h3>
+          <p>Microsoft Foundry, Machine Learning, AI Agents, Prompt Engineering</p>
+        </div>
+        <div class="skill-card">
+          <h3>Graphic Design</h3>
+          <p>Figma, Photoshop, Illustrator, Canva, Posters, Logos, Branding</p>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Platforms</h3>
+          <p>Git, GitHub, VS Code, Firebase Hosting</p>
+        </div>
+      </div>
     </section>
 
-    <section class="education">
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <ul>
-        <li><strong>St. Clare College of Caloocan</strong> – BS Computer Science (2023 - Present)</li>
-        <li><strong>Paulba NHS - SHS</strong> – STEM Track, High Honors, Best in Work Immersion, Research, and Calculus (2021 - 2023)</li>
-        <li><strong>Paulba NHS - JHS</strong> – Special Science Class, With Honors, Best in Math (2017 - 2021)</li>
-        <li><strong>H.J. Atienza Elementary School</strong> – With Honors, Best in Math (2011 - 2017)</li>
-      </ul>
-    </section>
-
+    <!-- CERTIFICATIONS & EVENTS -->
     <section class="experience">
-      <h2><i class="fas fa-certificate"></i> Certifications & Events</h2>
-      <ul>
-        <li><i class="fas fa-lock"></i> Cybersecurity Workshop – Splash Island, Nov 2024</li>
-        <li><i class="fas fa-database"></i> Data Science in Action – Xaltius Academy, Nov 2024</li>
-        <li><i class="fas fa-shield-alt"></i> Cybersecurity Pro Course – Xaltius Academy, Sept 2024</li>
-        <li><i class="fas fa-robot"></i> Basics of Machine Learning – UniAthena, April 2025</li>
-        <li><i class="fas fa-code"></i> Python Programming Basics – UniAthena, April 2025</li>
-        <li><i class="fas fa-lightbulb"></i> InnoVision 2025 – DLSU Manila, May 2025</li>
-      </ul>
+      <h2>Certifications & Events</h2>
+      <div class="card-container">
+        <!-- Include all your certifications here -->
+        <div class="card">
+          <h3>JavaScript Essentials 1</h3>
+          <p><strong>Organizer:</strong> DICT-ITU DTC | CISCO Networking Academy</p>
+          <p><strong>Focus:</strong> JavaScript Language</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Basics of Python</h3>
+          <p><strong>Organizer:</strong> UNIATHENA | Cambridge International Qualifications</p>
+          <p><strong>Focus:</strong> Basics of Python</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Basics of Machine Learning</h3>
+          <p><strong>Organizer:</strong> UNIATHENA | Cambridge International Qualifications</p>
+          <p><strong>Focus:</strong> Basics of Machine Learning</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>2 Days Cybersecurity Professional Course</h3>
+          <p><strong>Organizer:</strong> Xaltius</p>
+          <p><strong>Focus:</strong> Cybersecurity</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>INNOVISION 2025</h3>
+          <p><strong>Organizer:</strong> Philippine Coding Camp | Animo Labs</p>
+          <p><strong>Focus:</strong> Next-Gen Technologies & Innovation</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Data Science in Action</h3>
+          <p><strong>Organizer:</strong> Xaltius</p>
+          <p><strong>Focus:</strong> Data Science</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Cyber Security</h3>
+          <p><strong>Organizer:</strong> St. Clare College</p>
+          <p><strong>Focus:</strong> Cyber Security</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity in Cloud & AI</h3>
+          <p><strong>Organizer:</strong> St. Clare College</p>
+          <p><strong>Focus:</strong> Cybersecurity in Cloud & AI</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Modern Programming Trends: Full-Stack Dev & AI</h3>
+          <p><strong>Organizer:</strong> St. Clare College</p>
+          <p><strong>Focus:</strong> Full-Stack Development, DevOps, AI-Assisted Coding</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>AI Safety, Ethics & Responsible Tech</h3>
+          <p><strong>Organizer:</strong> St. Clare College</p>
+          <p><strong>Focus:</strong> AI Safety & Ethics</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>IBM Dev Day: AI Demystified | Hackathon</h3>
+          <p><strong>Organizer:</strong> IBM</p>
+          <p><strong>Focus:</strong> Modern AI Technologies</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+        <div class="card">
+          <h3>Global AI Manila AgentCamp 2026</h3>
+          <p><strong>Organizer:</strong> Microsoft Philippines</p>
+          <p><strong>Focus:</strong> AI Agents, Microsoft Foundry</p>
+          <p><strong>Role:</strong> Participant</p>
+        </div>
+      </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects">
-      <h2><i class="fas fa-laptop-code"></i> Sample Projects</h2>
-      <ul>
-        <li><strong>St. Clare CS Department Website</strong> – Led the development and UI/UX design of the department's official website.</li>
-        <li><strong>Portfolio Site</strong> – Designed and built a personal website to showcase my skills and visual design portfolio.</li>
-        <li><strong>UI Prototypes</strong> – Created mobile and desktop interface mockups using Figma for various internal projects.</li>
-      </ul>
+      <h2>Sample Projects</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>AgentCon Pizza Workshop</h3>
+          <p>Forked Microsoft Foundry Agent workshop project from GitHub.</p>
+          <p><strong>Technologies:</strong> Microsoft Foundry, AI Agents</p>
+          <p><strong>Role:</strong> Participant & Developer</p>
+          <a href="https://github.com/Jhownazzz/agentcon-pizza-workshop" target="_blank">View on GitHub</a>
+        </div>
+        <div class="card">
+          <h3>Smart Grocery Planner</h3>
+          <p>AI-powered budget optimization & meal recommendation system.</p>
+          <p><strong>Technologies:</strong> Python, Flask, Firebase, AI Logic</p>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <a href="https://github.com/Jhownazzz/smart-grocery-planner" target="_blank">View on GitHub</a>
+        </div>
+        <div class="card">
+          <h3>Graphic Design Projects</h3>
+          <p>Posters, logos, and branding designs. Portfolio available on Google Drive.</p>
+          <p><strong>Tools:</strong> Photoshop, Illustrator, Figma, Canva</p>
+          <a href="YOUR-GDRIVE-LINK-HERE" target="_blank">View Designs</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -204,9 +256,10 @@
     <div class="social-links">
       <a href="https://www.facebook.com/jhonasangelo.canotal.9" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="https://github.com/Jhownazzz" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jhonas-angelo-ca%C3%B1otal/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:canotaljhonasangelo@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-    &copy; 2025 Jhonas Angelo A. Cañotal. All rights reserved.
+    &copy; 2026 Jhonas Angelo A. Cañotal. All rights reserved.
   </footer>
 </body>
 </html>
